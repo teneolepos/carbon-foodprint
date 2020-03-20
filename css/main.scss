@@ -1073,7 +1073,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 				&.major {
 					h2, h3, h4, h5, h6 {
-						border-color: _palette($p, border);
+						border-color: #ffffff;
 					}
 
 					p {
@@ -1255,6 +1255,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 		&.style1 header.major h2 {
 			color: #216497;
+			border-color: #d3e0ea;
 		}
 		&.style1 header.major p {
 			color: #6392b6;
@@ -1525,11 +1526,15 @@ $baseurl: '{{ site.baseurl }}/images';
 		@include vendor('justify-content', 'center');
 		cursor: default;
 		height: 100vh;
-		min-height: 35em;
+		max-height: 30em;
 		overflow: hidden;
 		position: relative;
 		text-align: center;
 
+		video {
+			position: absolute;
+			z-index: -10;
+		}
 		h2 {
 			@include vendor('transform', 'scale(1)');
 			@include vendor('transition', ('transform 0.5s ease', 'opacity 0.5s ease'));
