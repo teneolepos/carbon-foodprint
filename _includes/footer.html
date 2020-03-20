@@ -1,0 +1,8 @@
+<!-- Footer -->
+<footer id="footer">
+  <ul class="copyright">
+    <li>&copy; {% assign thisyear = site.time | date: "%Y" %}
+    {{ thisyear }}
+    {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
+  </ul>
+</footer>
