@@ -1,123 +1,47 @@
 ---
-layout: landing
+layout: password
 ---
-				<!-- Banner -->
-					<section id="banner">
-						<video autoplay muted loop id="shopping">
-						<source src="images/shopping.mp4" type="video/mp4">
-						</video>
 
-						<div class="inner">
-							<h2>{{ site.title }}</h2>
-							<p>{{ site.description | markdownify }}</p>
-						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
+<section id="password">
+  <div id="pw-video">
+      <video autoplay muted loop id="agriculture">
+      <source src="images/agriculture.m4v" type="video/mp4"></source>
+      </video>
+  </div>
+  <div class="pw-form">
+        <h2>Enter password:</h2>
+        <input id="pass" type="text">
+          <button id="submit">Submit</button>
+  </div>
 
-					</section>
+</section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Integrating science and implementation to save our planet and improve health</h2>
-								<p>Our research combines a standardization of food lifecycle analysis (LCA) and behavioral economics to bridge the knowledge-action gap in our food purchasing decisions.</p>
-							</header>
-							<!--
-							<ul class="icons major">
-								<li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
-							</ul>-->
-						</div>
-					</section>
 
-					<!-- Two -->
-						<section id="two" class="wrapper style8 special">
-							<div class="inner">
-								<header class="major">
-									<h2>The Challenge</h2>
-									<p>Our individual food choices at the supermarket can change the food system to adopt more sustainable practices and promote better health outcomes.<br><br>However, a lack of relevant knowledge at critical moments of purchase are barriers to action.</p>
-								</header>
-							</div>
-							<div id="full">
-								<ul class="features">
-									<li class="icon fa-paper-plane-o">
-										<h3>Standardization</h3>
-										<p>No trusted standard in understanding and measuring the carbon footprint of food consumption.</p>
-									</li>
-									<li class="icon fa-laptop">
-										<h3>User Preference</h3>
-										<p>Lack of understanding on what information can lead to behavior change (knowledge-action gap).</p>
-									</li>
-									<li class="icon fa-code">
-										<h3>Relevant Touchpoints</h3>
-										<p>No relevant information related to carbon footprint readily available at the time of the purchase.</p>
-									</li>
-								</ul>
-							</div>
-						</section>
+<script type="text/javascript">
+    function hashFunc (input) {
+    /*	Do magical hash stuff */
+    var hash = 5381,
+        i    = input.length;
 
-				<!-- Approach -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><div id="image-special"><img src="images/data.svg" alt="" /></div></div><div class="content">
-								<h2>Science</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-								<a href="/blog" class="button special">Read More</a>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/supermarket.svg" alt="" /></div><div class="content">
-								<h2>Implementation</h2>
-								<p>Using a behavioral science approach, we seek to identify what information and design will influence purchasing decisions. This may be as simple as a green color label, to as complex as detailed lifecycle knowledge.<br><br>Want to share your thoughts? Take our survey to offer your input.</p>
-								<a href="https://docs.google.com/forms/d/1fNEXfnwX2UYugmTPn0OJrQLypzsdb_i55uFowrO3fo8/edit" target="_blank" class="button special">Take Survey</a>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/prototype.svg" alt="" /></div><div class="content">
-								<h2>Imagine the Future</h2>
-								<p>See the vision come to life in our product demo.</p>
-								<a href="mailto:email@example.com" class="button special">Request Demo</a>
-							</div>
-						</section>
-					</section>
+    while(i) {
+      hash = (hash * 33) ^ input.charCodeAt(--i);
+      }
 
-				<!-- Team -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Our Team</h2>
-								<p>We bring together deep expertise from scientists at the Mailman School of Public Health.</p>
-							</header>
-							<ul class="features">
-								<li>
-								<div class="profile"><img src="images/ziska.png" alt="" /></div>
-									<h3>Lewis Ziska, PhD</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li>
-									<div id="profile"><img src="images/kai.png" alt="" /></div>
-									<h3>Kai Ruggeri, PhD</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="">
-									<div class="profile"><img src="images/sining.png" alt="" /></div>
-									<h3>Sining Zhou, MPH</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
+    /* JavaScript does bitwise operations (like XOR, above) on 32-bit signed
+       * integers. Since we want the results to be always positive, convert the
+       * signed int to an unsigned by doing an unsigned bitshift. */
+    return hash >>> 0;
+    }
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2><a name="contact">Learn More</a></h2>
-								<p>Reach out if you're interested in learning more about our work or how you can get involved.</p>
-							</header>
-							<ul class="actions vertical">
-								<li><a href="mailto:co2foodprint@cumc.columbia.edu" class="button special">Contact Us</a></li>
-							</ul>
-						</div>
-					</section>
+    window.onload = function(){
+      document.getElementById('submit').onclick = function(){
+    	var pw = document.getElementById('pass').value;
+        var hash = hashFunc (pw);
+        if (hash === 2920416081) {
+        	window.location.href = "/home.html";
+          } else {
+        	alert('Incorrect password. Please try again.');
+          }
+        }
+      }
+</script>

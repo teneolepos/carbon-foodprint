@@ -1518,6 +1518,39 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+/* Password */
+#password {
+	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#agriculture {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	overflow: hidden;
+	z-index: -10;
+}
+
+.pw-form {
+		position: fixed;
+		top: 35%;
+		left: 38%;
+    box-sizing: border-box;
+}
+
+	.pw-form input[type="text"] {
+	display: block;
+	background: transparent;
+	margin-bottom: 2em;
+	border: 2px solid white;
+	border-radius: 3px;
+	}
+
+
 /* Banner */
 
 	#banner {
@@ -1596,7 +1629,6 @@ $baseurl: '{{ site.baseurl }}/images';
 			text-align: center;
 			text-transform: uppercase;
 			width: 16em;
-			z-index: 1;
 
 			&:after {
 				background-image: url('images/arrow.svg');
