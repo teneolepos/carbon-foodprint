@@ -83,6 +83,10 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
+	a.nostyle {
+		border-bottom: 0;
+	}
+
 	strong, b {
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
@@ -1234,7 +1238,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		@include padding(6em, 0);
 
 		> .inner {
-			width: 60em;
+			width: 60%;
 			margin: 0 auto;
 
 			@include breakpoint(large) {
@@ -1302,6 +1306,10 @@ $baseurl: '{{ site.baseurl }}/images';
 		&.style8 {
 			@include wrapper(accent5);
 		}
+	}
+
+	#three .inner {
+		width: 90%;
 	}
 
 /* Page Wrapper + Menu */
@@ -1760,7 +1768,7 @@ $baseurl: '{{ site.baseurl }}/images';
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/shopping.mov")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/shopping.mp4")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1836,6 +1844,7 @@ $baseurl: '{{ site.baseurl }}/images';
 		.copyright {
 			color: _palette(fg-light);
 			font-family: _font(family);
+			font-weight: 800;
 			font-size: 0.8em;
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
@@ -1886,7 +1895,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/shopping.mov")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/shopping.mp4")'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1906,7 +1915,7 @@ $baseurl: '{{ site.baseurl }}/images';
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/shopping.mov")'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("#{$baseurl}/shopping.mp4")'));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;

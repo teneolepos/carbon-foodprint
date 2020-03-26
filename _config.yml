@@ -3,10 +3,10 @@
 
 # Site settings
 title: CO2 Foodprint
-description: Can your choice at the supermarket help fight climate change and live healthier?
+description: Can your choices at the supermarket help you be healthy and fight climate change?
 owner: Sining Zhou # or company name
 first_published: 2016 # if migrating another site, the year of your first publish
-email: your-email@domain.com
+email: co2foodprint@cumc.columbia.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.co2foodprint.org" # the base hostname & protocol for your site
 social:
